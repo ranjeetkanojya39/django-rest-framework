@@ -5,6 +5,7 @@ def home(request):
     frinds = [
         "Ankit",
         "Alok",
-        "Ashok"
+        "Ashok",
+        'ankt'
     ]
     return JsonResponse({"friends": frinds})

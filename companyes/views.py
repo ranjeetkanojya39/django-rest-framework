@@ -1,6 +1,6 @@
 from django.http import HttpResponse, JsonResponse
 
-def home(request):
+def home_page(request):
     print("home response")
     frinds = [
         "Ankit",

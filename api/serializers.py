@@ -6,5 +6,6 @@ from api.models import Company
 
 class CompanySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
+        company_id = serializers.ReadOnlyField()
         model = Company
         fields="__all__"

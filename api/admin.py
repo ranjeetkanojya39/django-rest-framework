@@ -1,7 +1,17 @@
 from django.contrib import admin
 
-# Register your models here.
+# Register your models 
 
-from api.models import Company
+from api.models import Company, Employee
 
-admin.site.register(Company)
+
+class CompanyAdmin(admin.ModelAdmin):
+    list_display=('name','location' , 'type')
+    search_fields=('name',)
+
+class EmployeeAdmin(admin.ModelAdmin):
+    list_display=('name','email' , 'position')
+    list_filter=('phone',)
+
+admin.site.register(Company , CompanyAdmin)
+admin.site.register(Employee,EmployeeAdmin)
